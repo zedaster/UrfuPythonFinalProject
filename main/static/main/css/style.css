@@ -11,7 +11,6 @@ body {
 
 .expandable main {
     flex: 1 1 auto;
-    display: flex;
 }
 
 .expandable aside {
@@ -32,3 +31,4 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
