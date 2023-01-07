@@ -10,7 +10,7 @@
     <link href="{% static 'main/css/style.css' %}" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <script>
-        activePage = "{% block activePage %}{% endblock %}";
+        activePage = "{{ request.resolver_match.url_name }}";
         addEventListener('DOMContentLoaded', () => {
             document.querySelector(`#${activePage}-link`).classList.add('active');
         });
