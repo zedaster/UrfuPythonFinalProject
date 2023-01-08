@@ -9,18 +9,6 @@ body {
     display: flex;
 }
 
-.expandable main {
-    flex: 1 1 auto;
-}
-
-.expandable aside {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    color: white;
-}
-
 .site-header a {
     color: #999;
     transition: ease-in-out color .15s;
