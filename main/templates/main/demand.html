@@ -1,7 +1,151 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
 {% block title %}Востребованность{% endblock %}
 
 {% block content %}
-    <p>Вы на странице востребованности</p>
+    <h1>Востребованность</h1>
+
+    <img src="{% static 'main/img/demand-stats.png' %}" alt="График" width="100%"/>
+
+    <table class="table table-striped text-center">
+        <thead>
+        <tr>
+            <th scope="col">Год</th>
+            <th scope="col">Средняя зарплата</th>
+            <th scope="col">Средняя зарплата - Java-программист</th>
+            <th scope="col">Количество вакансий</th>
+            <th scope="col">Количество вакансий - Java-программист</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2007</td>
+            <td>38916</td>
+            <td>44980</td>
+            <td>2196</td>
+            <td>25</td>
+        </tr>
+
+        <tr>
+            <td>2008</td>
+            <td>43646</td>
+            <td>55985</td>
+            <td>17549</td>
+            <td>277</td>
+        </tr>
+
+        <tr>
+            <td>2009</td>
+            <td>42492</td>
+            <td>61498</td>
+            <td>17709</td>
+            <td>431</td>
+        </tr>
+
+        <tr>
+            <td>2010</td>
+            <td>43846</td>
+            <td>64389</td>
+            <td>29093</td>
+            <td>702</td>
+        </tr>
+
+        <tr>
+            <td>2011</td>
+            <td>47451</td>
+            <td>68543</td>
+            <td>36700</td>
+            <td>987</td>
+        </tr>
+
+        <tr>
+            <td>2012</td>
+            <td>48243</td>
+            <td>72936</td>
+            <td>44155</td>
+            <td>1079</td>
+        </tr>
+
+        <tr>
+            <td>2013</td>
+            <td>51510</td>
+            <td>72864</td>
+            <td>59952</td>
+            <td>1102</td>
+        </tr>
+
+        <tr>
+            <td>2014</td>
+            <td>50658</td>
+            <td>75400</td>
+            <td>66837</td>
+            <td>1289</td>
+        </tr>
+
+        <tr>
+            <td>2015</td>
+            <td>52696</td>
+            <td>82953</td>
+            <td>70039</td>
+            <td>1310</td>
+        </tr>
+
+        <tr>
+            <td>2016</td>
+            <td>62675</td>
+            <td>99001</td>
+            <td>75145</td>
+            <td>1702</td>
+        </tr>
+
+        <tr>
+            <td>2017</td>
+            <td>60936</td>
+            <td>105343</td>
+            <td>82824</td>
+            <td>2047</td>
+        </tr>
+
+        <tr>
+            <td>2018</td>
+            <td>58334</td>
+            <td>116866</td>
+            <td>131700</td>
+            <td>2714</td>
+        </tr>
+
+        <tr>
+            <td>2019</td>
+            <td>69468</td>
+            <td>122014</td>
+            <td>115088</td>
+            <td>2529</td>
+        </tr>
+
+        <tr>
+            <td>2020</td>
+            <td>73431</td>
+            <td>129424</td>
+            <td>102241</td>
+            <td>2179</td>
+        </tr>
+
+        <tr>
+            <td>2021</td>
+            <td>82690</td>
+            <td>169245</td>
+            <td>57623</td>
+            <td>1087</td>
+        </tr>
+
+        <tr>
+            <td>2022</td>
+            <td>91795</td>
+            <td>203493</td>
+            <td>18294</td>
+            <td>256</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
