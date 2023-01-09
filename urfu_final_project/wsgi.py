@@ -8,11 +8,14 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'urfu_final_project.settings')
+path = '/home/urfukazantsev/UrfuPythonFinalProject'
+if path not in sys.path:
+    sys.path.insert(0, path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'urfu_final_project.settings'
 
 application = get_wsgi_application()
-
-# TODO: Use WSGI to upload the project
