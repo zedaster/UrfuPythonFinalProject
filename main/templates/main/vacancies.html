@@ -4,17 +4,235 @@
 
 {% block content %}
     <h1>Последние вакансии</h1>
-    <p>При посещении страницы, необходимо выгружать из API HH (https://api.hh.ru/) в реальном времени IT-вакансии
-        соотвествующие выбранной профессии за любой прошедший будний день декабря (максимум 10 штук, отсортированных по
-        дате публикации вакансии)</p>
-    <p>Элементы списка должны содержать следующие поля:</p>
-    <ul>
-        <li>Название вакансии;</li>
-        <li>Описание вакансии (*повышенная сложность, требует доп. GET-запроса);</li>
-        <li>Навыки (в строку, через запятую) (*повышенная сложность, требует доп. GET-запроса);</li>
-        <li>Компания;</li>
-        <li>Оклад;</li>
-        <li>Название региона;</li>
-        <li>Дату публикации вакансии.</li>
-    </ul>
+    {#    <p>При посещении страницы, необходимо выгружать из API HH (https://api.hh.ru/) в реальном времени IT-вакансии#}
+    {#        соотвествующие выбранной профессии за любой прошедший будний день декабря (максимум 10 штук, отсортированных по#}
+    {#        дате публикации вакансии)</p>#}
+    {#    <p>Элементы списка должны содержать следующие поля:</p>#}
+    {#    <ul>#}
+    {#        <li>Название вакансии;</li>#}
+    {#        <li>Описание вакансии (*повышенная сложность, требует доп. GET-запроса);</li>#}
+    {#        <li>Навыки (в строку, через запятую) (*повышенная сложность, требует доп. GET-запроса);</li>#}
+    {#        <li>Компания;</li>#}
+    {#        <li>Оклад;</li>#}
+    {#        <li>Название региона;</li>#}
+    {#        <li>Дату публикации вакансии.</li>#}
+    {#    </ul>#}
+    <br>
+    <div class="row row-cols-1">
+        <div class="col">
+            <div class="card my-2">
+                <div class="card-body">
+                    <h5 class="card-title">Senior Java / Kotlin Backend Developer (iFunny)</h5>
+                    <h6 class="card-subtitle text-muted mb-3">5 000 – 7 000 EUR</h6>
+
+                    <h6 class="card-subtitle mb-1">FUNCORP</h6>
+                    <h6 class="card-subtitle text-muted mb-3">Кипр</h6>
+
+                    <div class="accordion mb-3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    Описание
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p class="card-text mb-3">iFunny is FUNCORP's flagship product. A social networking
+                                        app for fans of#}
+                                        memes, popular in the U.S., Brazil, and beyond. It competes with TikTok and
+                                        others for users'
+                                        attention thanks to:
+
+                                        A recommendation system and a personal content feed. We have a lot of data,
+                                        experiments, we
+                                        continue to implement ML and improve the algorithms that select memes. Kafka,
+                                        Clickhouse,
+                                        Airflow, Kubernetes, Kotlin are helping us with this.
+
+                                        A push notification system that helps effectively bring users back to the
+                                        product. We can
+                                        quickly filter millions of users according to complex business rules,
+                                        automatically generate
+                                        texts, crop and process images, and achieve high CTR with algorithms and
+                                        targeting. We are
+                                        planning to personalize and apply ML models in this part of the product.
+
+                                        What we will be expecting from you:
+
+                                        Extensive experience in backend development in Java/Kotlin + MongoDB + Spring
+                                        Framework;
+
+                                        Love to write clean code, use the DDD approach and follow SOLID principles;
+
+                                        Sense of humor :)
+
+                                        What will you do:
+
+                                        Organizing of uninterrupted distribution of individual push notifications to
+                                        users, tens of
+                                        thousands per second (scaling of sending, distributed caches);
+
+                                        Implementing complex product experiments: on-the-fly image processing, feeds
+                                        formation process;
+
+                                        Ensuring the stability and fault tolerance of the entire backend (this includes
+                                        service mesh
+                                        integration: client-side request balancing, service discovery, circuit breaker,
+                                        end-to-end
+                                        tracing, and graceful degradation);
+
+                                        Optimization of work with databases and queues.
+
+                                        Tech stack we use:
+
+                                        Java/Kotlin + Spring + a bit of Ktor;
+
+                                        DB: MongoDB, Redis, Clickhouse, Elasticsearch, Memcached, Kafka;
+
+                                        Hybrid infrastructure (own DC + Amazon AWS);
+
+                                        Docker, Jenkins, Gitlab.
+
+                                        What we offer:
+
+                                        Office in Limassol (Cyprus);
+
+                                        Relocation package and visa support, opportunity to become an EU citizen;
+
+                                        Health insurance after probation;
+
+                                        Powerful and fast hardware, Apple devices;
+
+                                        Child's birth and birthday bonuses;
+
+                                        Monthly budget for team building and corporate events;
+
+                                        Free breakfasts and lunches with a wide choice of dishes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {#                    <div class="mb-3">#}
+                    {#                        <span class="badge bg-light text-dark">Java</span>#}
+                    {#                        <span class="badge bg-light text-dark">Spring Framework</span>#}
+                    {#                    </div>#}
+                    <p class="card-text">Навыки: Java, Spring Framework</p>
+                    <p class="card-text"><small class="text-muted">Дата публикации: 04.01.2023 06:32</small></p>
+                    {#                    <a href="#" class="card-link">Card link</a>#}
+                    {#                    <a href="#" class="card-link">Another link</a>#}
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card my-2">
+                <div class="card-body">
+                    <h5 class="card-title">Senior Java / Kotlin Backend Developer (iFunny)</h5>
+                    <h6 class="card-subtitle text-muted mb-3">5 000 – 7 000 EUR</h6>
+
+                    <h6 class="card-subtitle mb-1">FUNCORP</h6>
+                    <h6 class="card-subtitle text-muted mb-3">Кипр</h6>
+
+                    <div class="accordion mb-3">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Описание
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p class="card-text mb-3">iFunny is FUNCORP's flagship product. A social networking
+                                        app for fans of#}
+                                        memes, popular in the U.S., Brazil, and beyond. It competes with TikTok and
+                                        others for users'
+                                        attention thanks to:
+
+                                        A recommendation system and a personal content feed. We have a lot of data,
+                                        experiments, we
+                                        continue to implement ML and improve the algorithms that select memes. Kafka,
+                                        Clickhouse,
+                                        Airflow, Kubernetes, Kotlin are helping us with this.
+
+                                        A push notification system that helps effectively bring users back to the
+                                        product. We can
+                                        quickly filter millions of users according to complex business rules,
+                                        automatically generate
+                                        texts, crop and process images, and achieve high CTR with algorithms and
+                                        targeting. We are
+                                        planning to personalize and apply ML models in this part of the product.
+
+                                        What we will be expecting from you:
+
+                                        Extensive experience in backend development in Java/Kotlin + MongoDB + Spring
+                                        Framework;
+
+                                        Love to write clean code, use the DDD approach and follow SOLID principles;
+
+                                        Sense of humor :)
+
+                                        What will you do:
+
+                                        Organizing of uninterrupted distribution of individual push notifications to
+                                        users, tens of
+                                        thousands per second (scaling of sending, distributed caches);
+
+                                        Implementing complex product experiments: on-the-fly image processing, feeds
+                                        formation process;
+
+                                        Ensuring the stability and fault tolerance of the entire backend (this includes
+                                        service mesh
+                                        integration: client-side request balancing, service discovery, circuit breaker,
+                                        end-to-end
+                                        tracing, and graceful degradation);
+
+                                        Optimization of work with databases and queues.
+
+                                        Tech stack we use:
+
+                                        Java/Kotlin + Spring + a bit of Ktor;
+
+                                        DB: MongoDB, Redis, Clickhouse, Elasticsearch, Memcached, Kafka;
+
+                                        Hybrid infrastructure (own DC + Amazon AWS);
+
+                                        Docker, Jenkins, Gitlab.
+
+                                        What we offer:
+
+                                        Office in Limassol (Cyprus);
+
+                                        Relocation package and visa support, opportunity to become an EU citizen;
+
+                                        Health insurance after probation;
+
+                                        Powerful and fast hardware, Apple devices;
+
+                                        Child's birth and birthday bonuses;
+
+                                        Monthly budget for team building and corporate events;
+
+                                        Free breakfasts and lunches with a wide choice of dishes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {#                    <div class="mb-3">#}
+                    {#                        <span class="badge bg-light text-dark">Java</span>#}
+                    {#                        <span class="badge bg-light text-dark">Spring Framework</span>#}
+                    {#                    </div>#}
+                    <p class="card-text">Навыки: Java, Spring Framework</p>
+                    <p class="card-text"><small class="text-muted">Дата публикации: 04.01.2023 06:32</small></p>
+                    {#                    <a href="#" class="card-link">Card link</a>#}
+                    {#                    <a href="#" class="card-link">Another link</a>#}
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
