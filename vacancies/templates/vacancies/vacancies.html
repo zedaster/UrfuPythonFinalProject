@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Последние вакансии{% endblock %}
+
+{% block content %}
+    <h1>Последние вакансии</h1>
+    {#    <p>При посещении страницы, необходимо выгружать из API HH (https://api.hh.ru/) в реальном времени IT-вакансии#}
+    {#        соотвествующие выбранной профессии за любой прошедший будний день декабря (максимум 10 штук, отсортированных по#}
+    {#        дате публикации вакансии)</p>#}
+    {#    <p>Элементы списка должны содержать следующие поля:</p>#}
+    {#    <ul>#}
+    {#        <li>Название вакансии;</li>#}
+    {#        <li>Описание вакансии (*повышенная сложность, требует доп. GET-запроса);</li>#}
+    {#        <li>Навыки (в строку, через запятую) (*повышенная сложность, требует доп. GET-запроса);</li>#}
+    {#        <li>Компания;</li>#}
+    {#        <li>Оклад;</li>#}
+    {#        <li>Название региона;</li>#}
+    {#        <li>Дату публикации вакансии.</li>#}
+    {#    </ul>#}
+    <br>
+    <div class="row row-cols-1">
+        {% for vac in vacancies %}
+            <div class="col">
+                <div class="card my-2">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h5 class="card-title">{{ vac.name }}</h5>
+                            {% if vac.salary %}
+                                <h6 class="card-subtitle text-muted">{{ vac.salary }}</h6>
+                            {% endif %}
+                        </div>
+                        <h6 class="card-subtitle mb-1">{{ vac.employer_name }}</h6>
+                        <h6 class="card-subtitle text-muted mb-3">{{ vac.area_name }}</h6>
+
+                        <div class="accordion mb-3" id="accordion{{ vac.hh_id }}">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ vac.hh_id }}">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse{{ vac.hh_id }}" aria-expanded="false" aria-controls="collapse{{ vac.hh_id }}">
+                                        Описание
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ vac.hh_id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ vac.hh_id }}"
+                                     data-bs-parent="#accordion{{ vac.hh_id }}">
+                                    <div class="accordion-body">
+                                        <p class="card-text mb-3">{{ vac.description | safe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {#                    <div class="mb-3">#}
+                        {#                        <span class="badge bg-light text-dark">Java</span>#}
+                        {#                        <span class="badge bg-light text-dark">Spring Framework</span>#}
+                        {#                    </div>#}
+                        <p class="card-text">Навыки: {{ vac.str_skills }}</p>
+                        <p class="card-text">
+                            <small class="text-muted">Дата публикации: {{ vac.str_published_at }}</small>
+                        </p>
+                        {#                    <a href="#" class="card-link">Card link</a>#}
+                        {#                    <a href="#" class="card-link">Another link</a>#}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

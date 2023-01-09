@@ -17,7 +17,3 @@ def geography(request):
 
 def skills(request):
     return render(request, 'main/skills.html')
-
-
-def vacancies(request):
-    return render(request, 'main/vacancies.html')
