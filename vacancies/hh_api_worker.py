@@ -49,7 +49,10 @@ class HhApiWorker:
             v_id = item['id']
             name = item['name']
             employer_name = item['employer']['name']
-            area_name = item['area']['name']
+            if item['area'] is not None:
+                area_name = item['area']['name']
+            else:
+                area_name = None
             published_at = parse_datetime(item['published_at'])
             salary = None
             if item['salary'] is not None:
